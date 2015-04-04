@@ -10,6 +10,7 @@ body {
     -webkit-touch-callout: none ;
     -webkit-text-size-adjust: none ; -ms-text-size-adjust: none ;
     -webkit-user-select: none ; -moz-user-select: none ; -ms-user-select: none ; user-select: none ;
+    font-family: verdana;
     -webkit-highlight: none ;
     -webkit-tap-highlight-color: rgba(0,0,0,0) ;
     -webkit-tap-highlight-color: transparent ;      /* For some Androids */
@@ -41,4 +42,17 @@ body {
 
 .align-center {
     text-align: center ;
+}
+
+div p {
+    border: 2px solid black;
+    height: 65px;
+    text-align:center;
+    font-size: 15;
+    padding-bottom: 50
+}
+
+.picture {
+    border: 0px solid green;
+    height: 200px;
 }
