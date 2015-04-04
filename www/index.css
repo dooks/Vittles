@@ -23,7 +23,7 @@ html, body {
 }
 
 #vbody {
-  height: 65%;
+  height: 70%;
   background-color: white;
   text-align: center;
 }
@@ -59,7 +59,7 @@ html, body {
       }
 
 #vfooter {
-  height: 25%;
+  height: 20%;
 }
 
   .vfooter-side {
