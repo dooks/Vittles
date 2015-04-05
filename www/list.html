@@ -45,7 +45,7 @@
     <!-- <link rel="stylesheet" href="lib/af/af.ui.css"> -->
 <!--
     <script>
-		// if you're using App Framework, you might want to also do this
+    // if you're using App Framework, you might want to also do this
         $.ui.autoLaunch = false ;
         // and then use $.ui.launch() as shown in the app.hideSplashScreen() function
         // see https://github.com/01org/appframework/blob/master/documentation/detail/%24.ui.launch.md
@@ -58,43 +58,13 @@
 
 <body>
   <div id="vheader">
-    <div class="cont-icon-sm">
-      <img id="icon-setting" class="icon-sm" src="img/settings.png"/>
-    </div>
-
-    <div class="cont-icon-sm">
-      <img id="icon-fork" class="icon-sm" />
-    </div>
-
-    <div class="cont-icon-sm">
-      <img id="icon-list" class="icon-sm" src="img/lists.png"/>
-    </div>
+    <img id="settings" class="icon-sm" src="img/settings.png"/>
+    <img id="cactus"   class="icon-sm" />
+    <img id="list"     class="icon-sm" />
   </div>
 
   <div id="vbody">
-    <div id="cont-rest-cont">
-      <div id="cont-rest">
-        <div id="cont-rest-img">
-          <img id="rest-img" src="img/pizza.jpg"/>
-        </div>
-        <div id="cont-rest-desc">
-          <span id="rest-name">Name</span>
-          <span id="rest-avgrating">Rating</span>
-          <span id="rest-price">$$</span>
-          <span id="rest-distance">2 mi</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="vfooter-side">
-      <img id="cut-that"  class="icon-big" src="img/cut-that-logo.png" />
-      <!--<div id="cut-that"></div>-->
-    </div>
-
-    <div class="vfooter-side">
-      <img id="fork-yeah" class="icon-big" src="img/fork-yeah-logo.png" />
-      <!--<div id="fork-yeah"></div>-->
-    </div>
+    <div id="list"></div>
   </div>
 
 <!-- IMPORTANT: Do not include a weinre script tag as part of your release builds! -->
@@ -141,7 +111,7 @@
     a data connection (network connection) to get the app started. If your app startup required a data
     connection to initialize and start interaction with the user, lack of a reliable network connection
     could be disasterous. Not to mention it generally results in a slower load time. Loading locally is
-	is much friendlier to your end user's data plan and battery.  :-)
+  is much friendlier to your end user's data plan and battery.  :-)
 
     NOTE: do not use a directory prefix with intelxdk.js or cordova.js - they are inserted automatically
     by the build system, emulator and other tools and are assumed to be in the index.html source directory.
@@ -172,16 +142,16 @@
     not use the "document ready" event to start your application. You should wait for the "device ready"
     event before you begin your application (if it uses any device APIs); in practice, it is best to wait
     for both. (See the init-dev.js file in this template for an example of how to do this, it generates
-	a custom "app.Ready" event that you can trigger off of and just forget about the other events.)
+  a custom "app.Ready" event that you can trigger off of and just forget about the other events.)
 
     NOTE: *any* library that redefines addEventListener() or fiddles with outstanding events may
     interfere with capturing the "device ready" event and should, therefore, be placed *BEFORE*
     the Cordova and Intel XDK libraries in the load order.
 
-	ALSO: if you use weinre for debugging (ala the Test tab or your own), you may have to experiment with
-	the placement of the weinre script. Some recommended locations are shown within. If these locations
-	do not work, you may have to experiment. The optimum placement can be app-specific, primarily as a
-	function of the included JavaScript libraries and your initialization.
+  ALSO: if you use weinre for debugging (ala the Test tab or your own), you may have to experiment with
+  the placement of the weinre script. Some recommended locations are shown within. If these locations
+  do not work, you may have to experiment. The optimum placement can be app-specific, primarily as a
+  function of the included JavaScript libraries and your initialization.
 -->
 
 </html>

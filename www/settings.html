@@ -5,7 +5,7 @@
   * Please see the included README.md file for license terms and conditions.
   -->
 <head>
-    <title>Blank Cordova App Project Template</title>
+    <title>Main</title>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
 
 <!--
@@ -51,20 +51,39 @@
         // see https://github.com/01org/appframework/blob/master/documentation/detail/%24.ui.launch.md
     </script>
 -->
-    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <link rel="stylesheet" href="css/app.css" />
 </head>
 
 
 <body>
-    <h1 class="align-center">A Blank Project Template</h1>
-    <p class="align-center">
-        To use this template as a starter app, start with init-app.js and app.js for your JavaScript code.
-        See the README.md file for more details and the comments inside index.html, app.js and init-app.js.
-    </p>
-    <br>
-    <p class="align-center">
-        <input type="button" id="id_btnHello" value="Touch Me">
-    </p>
+  <div id="vheader">
+    <img id="settings" class="icon-sm" src="img/settings.png"/>
+    <img id="cactus"   class="icon-sm" />
+    <img id="list"     class="icon-sm" />
+  </div>
+
+  <div id="vbody">
+    <div id="cont-profile">
+      <img  id="profile-img" src="" />
+      <span id="profile-name">NAME</span>
+    </div>
+    <div id="list">
+      <div id=  "sett-dist" class="list-item">
+        <span>Discovery Distance</span>
+      </div>
+      <div id=  "sett-food" class="list-item">
+        <span>Type Of Food</span>
+      </div>
+      <div id= "sett-price" class="list-item">
+        <span>Price Range</span>
+      </div>
+      <div id="sett-rating" class="list-item">
+        <span>Min. Avg. Rating</span>
+      </div>
+    </div>
+
+  </div>
 
 <!-- IMPORTANT: Do not include a weinre script tag as part of your release builds! -->
 <!-- Place your remote debugging (weinre) script URL from the Test tab here, if it does not work below -->
