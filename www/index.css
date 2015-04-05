@@ -1,0 +1,136 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+.icon-sm {
+  height: 80%;
+  padding: 1%;
+}
+
+.icon-big {
+  height: 80%;
+  padding: 1%;
+}
+.settings-item {
+  display: table;
+  border: 1px solid black;
+  width: 100%;
+}
+
+  .settings-item p {
+    display: table-cell;
+    vertical-align: middle;
+  height: 10%;
+  }
+
+
+
+
+#vheader {
+  height: 10%;
+  background-color: red;
+}
+
+#vbody {
+  height: 70%;
+  background-color: white;
+  text-align: center;
+}
+
+  // Main
+  #cont-rest-cont {
+    display: inline-table;
+    width:    50%;
+    height:  100%;
+    padding: 5% 0;
+  }
+
+    #cont-rest {
+      display: table-cell;
+      vertical-align: middle;
+      border: 1px solid black;
+    }
+
+    #cont-rest-img {
+      width: 100%;
+      height: 90%;
+    }
+
+    #cont-rest-desc {
+      width: 100%;
+      height: 10%;
+      display: table;
+      background-color: black;
+    }
+      #cont-rest-desc span {
+        display: table-cell;
+        vertical-align: middle;
+        color: white;
+      }
+
+  // Settings
+  #profile {
+    height: 30%;
+  }
+
+  #profile-picture {
+    display: block;
+    margin: 0 auto;
+    height: 100px;
+    width: 100px;
+  }
+
+  .settings-item {
+    height: 30%;
+    border: 1px solid black;
+  }
+
+#vfooter {
+  height: 20%;
+}
+
+  .vfooter-side {
+    float: left;
+    width: 50%;
+  }
+
+  .vfooter-side div {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    border-radius: 50%;
+    margin: 0 5%;
+  }
+
+
+  #cut-that {
+    float: right;
+  }
+
+  #fork-yeah {
+    float: left;
+  }
+
+.Rest_name{
+	font-size: 22px;
+}
+
+.Rest_attrib{
+	font-style: italic;
+	font-weight: bold;
+}
+
+.img_space{
+	width:100%;
+	height: 100%;
+	margin: 0;
+	border-top-style: solid;
+	border-left-style: dotted;
+	border-right-style: dotted;
+	border-bottom-style: solid;
+	border-width: large;
+	border-color: red;
+	
+}
