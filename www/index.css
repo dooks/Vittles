@@ -13,6 +13,17 @@ html, body {
   height: 80%;
   padding: 1%;
 }
+.settings-item {
+  display: table;
+  border: 1px solid black;
+  width: 100%;
+}
+
+  .settings-item p {
+    display: table-cell;
+    vertical-align: middle;
+  height: 10%;
+  }
 
 
 
@@ -28,6 +39,7 @@ html, body {
   text-align: center;
 }
 
+  // Main
   #cont-rest-cont {
     display: inline-table;
     width:    50%;
@@ -58,6 +70,23 @@ html, body {
         color: white;
       }
 
+  // Settings
+  #profile {
+    height: 30%;
+  }
+
+  #profile-picture {
+    display: block;
+    margin: 0 auto;
+    height: 100px;
+    width: 100px;
+  }
+
+  .settings-item {
+    height: 30%;
+    border: 1px solid black;
+  }
+
 #vfooter {
   height: 20%;
 }
@@ -83,3 +112,4 @@ html, body {
   #fork-yeah {
     float: left;
   }
+
