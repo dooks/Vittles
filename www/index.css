@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 html, body {
   height: 100%;
   width: 100%;
@@ -113,3 +114,29 @@ html, body {
     float: left;
   }
 
+=======
+.vheader{
+	height: 10%;
+	background-color: red;
+}
+.Rest_name{
+	font-size: 22px;
+}
+
+.Rest_attrib{
+	font-style: italic;
+	font-weight: bold;
+}
+
+.img_space{
+	width:100%;
+	height: 100%;
+	margin: 0;
+	border-top-style: solid;
+	border-left-style: dotted;
+	border-right-style: dotted;
+	border-bottom-style: solid;
+	border-width: large;
+	border-color: red;
+	
+}
