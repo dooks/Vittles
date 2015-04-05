@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Map</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <style>
+      html, body, #map-canvas {
+        height: 80%;
+          width: 100%;
+        margin: 0px;
+        padding: 0px
+      }
+    </style>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+    <script>
+var map;
+function initialize() {
+  var mapOptions = {
+    zoom: 14,
+    center: new google.maps.LatLng(34.0722, -118.4441)
+  };
+  map = new google.maps.Map(document.getElementById('map-canvas'),
+      mapOptions);
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+
+
+  var geocoder;
+  var map;
+  var latlng;
+  var radius;
+  var query;
+        
+  function initialize() {
+    geocoder = new google.maps.Geocoder();
+    latlng = new google.maps.LatLng(-34.397, 150.644);
+    var mapOptions = {
+      zoom: 8,
+      center: latlng
+    }
+    map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+  }
+
+  function codeAddress() {
+    var address = document.getElementById("address").value;
+    geocoder.geocode( { 'address': address}, function(results, status) {
+      if (status == google.maps.GeocoderStatus.OK) {
+        map.setCenter(results[0].geometry.location);
+        var marker = new google.maps.Marker({
+            map: map,
+            position: results[0].geometry.location
+        });
+          document.getElementById("set-location").style.display="block";
+          radius = document.getElementById("rad").value;
+          alert(radius);
+      } else {
+        alert("Geocode was not successful for the following reason: " + status);
+          document.getElementById("set-location").style.display="none";
+      }
+    });
+  }
+      
+        function showValue(newValue)
+        {
+            document.getElementById("range").innerHTML=newValue;
+            radius = document.getElementById("rad").value;
+        }
+        
+        function setVars(coords, r)
+        {
+            query = "http://api.yelp.com/v2/search?term=food&c11=" + latlng + "&radius_filter=" + rad.value;
+            alert(query);
+        }
+    </script>
+    
+
+<body onload="initialize()">
+    <input id="address" type="textbox" value="New York, NY">
+    <input type="button" value="Go" onclick="codeAddress()">
+    <br>
+ <div id="map-canvas" style="width: 320px; height: 480px;"></div>
+    <div id="set-location" style="display: none">
+    <form name="queryYelpForm" id="queryYelpForm" method="get" action=query>
+        Search Radius: &nbsp; &nbsp; 1 <input type="range" id="rad" min="1" max="25" value="5" step="1" onchange="showValue(this.value)" />
+ 25 &nbsp; &nbsp; <span id="range">5</span>
+        <br>
+        <input type="button" value="Set Location" onclick="setVars(latlng, rad.value);">
+        </form></div>
+  </body>
+
+ </head>
+
+</html>
+
+
+
+
